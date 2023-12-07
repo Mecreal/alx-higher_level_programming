@@ -8,4 +8,4 @@ def weight_average(my_list=[]):
         s_s_t_w = s_s_t_w + s * w
         s_w += w
     average = s_s_t_w/s_w
-    return s_s_t_w
+    return average
