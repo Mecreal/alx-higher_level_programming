@@ -49,7 +49,7 @@ class Square:
         else:
             print("\n"*self.__position[1], end="")
             for _ in range(val):
-                print("_" * self.__position[0] + "#" * val)
+                print(" " * self.__position[0] + "#" * val)
 
     @staticmethod
     def _is_valid_position(value):
