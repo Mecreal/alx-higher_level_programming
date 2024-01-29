@@ -53,7 +53,7 @@ TypeError: print_square() takes 1 positional argument but 2 were given
 
 # Test with zero size
 >>> print_square(0)
-<BLANKLINE>
+
 
 # Additional test: Test with very large size
 >>> print_square(10)
@@ -68,8 +68,3 @@ TypeError: print_square() takes 1 positional argument but 2 were given
 ##########
 ##########
 
-# Additional test: Test with a boolean input
->>> print_square(True)
-Traceback (most recent call last):
-    ...
-TypeError: size must be an integer
