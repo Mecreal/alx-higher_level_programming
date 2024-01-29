@@ -12,8 +12,8 @@ def add_integer(a, b=98):
 
     Args:
         a (int, float): The first number, must be an integer or float.
-        b (int, float, optional): The second number, must be an integer 
-        	or float. Defaults to 98.
+        b (int, float, optional): The second number, must be an integer
+            or float. Defaults to 98.
 
     Returns:
         int: The addition of a and b after casting them to integers.
