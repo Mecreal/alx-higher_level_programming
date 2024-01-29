@@ -7,7 +7,7 @@ This module provides a function that prints a square with the character #.
 def print_square(size):
     """
     print the square with #
-    
+
     Args:
         size: int, size of the square.
 
@@ -19,7 +19,7 @@ def print_square(size):
     """
     if not isinstance(size, (int)):
         raise TypeError("size must be an integer")
-    
+
     if size < 0:
         raise ValueError("size must be >= 0")
 
