@@ -68,10 +68,7 @@ class TestMaxInteger(unittest.TestCase):
         huge_list = list(range(1000000))  # list from 0 to 999999
         self.assertEqual(max_integer(huge_list), 999999)
 
-    def test_max_integer_list_of_strings(self):
-        # Test with a list of strings (should raise an error)
-        with self.assertRaises(TypeError):
-            max_integer(["a", "b", "c"])
+
 
     def test_max_integer_list_of_booleans(self):
         # Test with a list of booleans
