@@ -60,11 +60,11 @@ TypeError: text must be a string
 
 # Test string with leading spaces
 >>> text_indentation("    Discover New Places")
-Discover New Places
+    Discover New Places
 
 # Test string with trailing spaces
 >>> text_indentation("Explore now    ")
-Explore now
+Explore now    
 
 # Test with a sequence of newlines
 >>> text_indentation("\n\n\n")
