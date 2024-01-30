@@ -1,0 +1,87 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Basic test with period
+>>> text_indentation("Hello world.")
+Hello world.$
+$
+
+# Basic test with question mark
+>>> text_indentation("Hello world?")
+Hello world?$
+$
+
+# Basic test with colon
+>>> text_indentation("Hello world:")
+Hello world:$
+$
+
+# Test with multiple punctuation marks
+>>> text_indentation("Hello: world. How are you? Today is sunny.")
+Hello:$
+$
+world.$
+$
+How are you?$
+$
+Today is sunny.$
+$
+
+# Test with spaces after punctuation
+>>> text_indentation("Hello:  world.  How are you?  Today is sunny.")
+Hello:$
+$
+world.$
+$
+How are you?$
+$
+Today is sunny.$
+$
+
+# Test with no punctuation
+>>> text_indentation("Hello world")
+Hello world
+
+# Test with leading and trailing spaces
+>>> text_indentation("  Hello world.  ")
+Hello world.$
+$
+
+# Test with multiple spaces between sentences
+>>> text_indentation("Hello world.  How are you?")
+Hello world.$
+$
+How are you?$
+$
+
+# Test with new lines in the text
+>>> text_indentation("Hello world.\nHow are you?")
+Hello world.$
+$
+How are you?$
+$
+
+# Test with tabs in the text
+>>> text_indentation("Hello\tworld. How are you?")
+Hello\tworld.$
+$
+How are you?$
+$
+
+# Test with an empty string
+>>> text_indentation("")
+
+# Test with only spaces
+>>> text_indentation("   ")
+
+# Test with only punctuation
+>>> text_indentation(".?:")
+
+$
+$
+$
+
+# Test with non-string input (should raise TypeError)
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
