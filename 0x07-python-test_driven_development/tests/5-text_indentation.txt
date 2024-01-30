@@ -97,3 +97,9 @@ Yes.
 <BLANKLINE>
 It's rewarding.
 <BLANKLINE>
+
+# Test missing argument (should raise TypeError in your current implementation)
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
