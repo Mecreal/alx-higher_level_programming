@@ -1,87 +1,99 @@
+# Import the function for testing
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-# Basic test with period
->>> text_indentation("Hello world.")
-Hello world.$
-$
+# Test with simple text and a colon
+>>> text_indentation("Good morning: World")
+Good morning:
+<BLANKLINE>
+World
 
-# Basic test with question mark
->>> text_indentation("Hello world?")
-Hello world?$
-$
+# Test with a question mark and varied spacing
+>>> text_indentation("Is it sunny  ? Yes, it is.")
+Is it sunny?
+<BLANKLINE>
+Yes, it is.
+<BLANKLINE>
 
-# Basic test with colon
->>> text_indentation("Hello world:")
-Hello world:$
-$
+# Test with a period and no trailing spaces
+>>> text_indentation("Summer is here. Enjoy the sun.")
+Summer is here.
+<BLANKLINE>
+Enjoy the sun.
+<BLANKLINE>
 
-# Test with multiple punctuation marks
->>> text_indentation("Hello: world. How are you? Today is sunny.")
-Hello:$
-$
-world.$
-$
-How are you?$
-$
-Today is sunny.$
-$
+# Test with multiple newlines and delimiters
+>>> text_indentation("Breakfast: Eggs?\n\nLunch: Salad.")
+Breakfast:
+<BLANKLINE>
+Eggs?
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+Lunch:
+<BLANKLINE>
+Salad.
+<BLANKLINE>
 
-# Test with spaces after punctuation
->>> text_indentation("Hello:  world.  How are you?  Today is sunny.")
-Hello:$
-$
-world.$
-$
-How are you?$
-$
-Today is sunny.$
-$
+# Test with only punctuation marks and spaces
+>>> text_indentation("  .  :  ?  ")
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
 
-# Test with no punctuation
->>> text_indentation("Hello world")
-Hello world
+# Test with non-string input (number)
+>>> text_indentation(2021)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
 
-# Test with leading and trailing spaces
->>> text_indentation("  Hello world.  ")
-Hello world.$
-$
-
-# Test with multiple spaces between sentences
->>> text_indentation("Hello world.  How are you?")
-Hello world.$
-$
-How are you?$
-$
-
-# Test with new lines in the text
->>> text_indentation("Hello world.\nHow are you?")
-Hello world.$
-$
-How are you?$
-$
-
-# Test with tabs in the text
->>> text_indentation("Hello\tworld. How are you?")
-Hello\tworld.$
-$
-How are you?$
-$
+# Test with None as input
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
 
 # Test with an empty string
 >>> text_indentation("")
 
-# Test with only spaces
->>> text_indentation("   ")
+# Test string with leading spaces
+>>> text_indentation("    Discover New Places")
+Discover New Places
 
-# Test with only punctuation
->>> text_indentation(".?:")
+# Test string with trailing spaces
+>>> text_indentation("Explore now    ")
+Explore now
 
-$
-$
-$
+# Test with a sequence of newlines
+>>> text_indentation("\n\n\n")
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
 
-# Test with non-string input (should raise TypeError)
->>> text_indentation(123)
+# Test with just delimiters and no spaces
+>>> text_indentation(".:?")
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
+
+# Test with a boolean input
+>>> text_indentation(True)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
+
+# Test with mixed content and delimiters
+>>> text_indentation("Travel: Far & Wide? Yes. It's rewarding.")
+Travel:
+<BLANKLINE>
+Far & Wide?
+<BLANKLINE>
+Yes.
+<BLANKLINE>
+It's rewarding.
+<BLANKLINE>
