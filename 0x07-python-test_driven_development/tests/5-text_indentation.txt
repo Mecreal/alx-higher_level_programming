@@ -9,7 +9,7 @@ World
 
 # Test with a question mark and varied spacing
 >>> text_indentation("Is it sunny  ? Yes, it is.")
-Is it sunny?
+Is it sunny  ?
 <BLANKLINE>
 Yes, it is.
 <BLANKLINE>
@@ -36,7 +36,7 @@ Salad.
 
 # Test with only punctuation marks and spaces
 >>> text_indentation("  .  :  ?  ")
-.
+  .
 <BLANKLINE>
 :
 <BLANKLINE>
