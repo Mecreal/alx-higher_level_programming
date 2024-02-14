@@ -1,3 +1,3 @@
--- SHOW ALL TABLES --
+-- Inserting the values in the Table --
 
-SHOW TABLES;
+INSERT INTO `first_table` (`id`, `name`) VALUES (89, "Best School");
