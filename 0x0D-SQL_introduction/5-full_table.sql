@@ -1,0 +1,3 @@
+--  SHOW CREATE FULL TABLE--
+
+SHOW CREATE TABLE first_table;
