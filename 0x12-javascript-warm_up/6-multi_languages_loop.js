@@ -4,6 +4,6 @@
 
 const mylist = ['C is fun', 'Python is cool', 'Javascript is amazing'];
 
-mylist.forEach(msg => {
-  console.log(msg);
-});
+for (let i = 0; i < mylist.length; i++) {
+  console.log(mylist[i]);
+}
