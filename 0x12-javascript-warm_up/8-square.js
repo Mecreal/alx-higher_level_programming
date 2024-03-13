@@ -8,6 +8,6 @@ if (isNaN(number)) {
   console.log('Missing size');
 } else if (number > 0) {
   for (let i = 0; i < number; i++) {
-      console.log('X'.repeat(number));
+    console.log('X'.repeat(number));
   }
 }
