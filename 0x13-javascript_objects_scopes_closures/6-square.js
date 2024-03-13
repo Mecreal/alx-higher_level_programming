@@ -9,7 +9,7 @@ module.exports = class Square extends Square5 {
   }
 
   charPrint (c) {
-    if (c !== undefined || c != null) {
+    if (c !== undefined && c != null) {
       for (let i = 0; i < this.height; i++) {
         console.log(c.repeat(this.height));
       }
