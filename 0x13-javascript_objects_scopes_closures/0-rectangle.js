@@ -2,5 +2,6 @@
 // void class
 
 class Rectangle {
-  constructor () { }
 }
+
+module.exports = { Rectangle };
