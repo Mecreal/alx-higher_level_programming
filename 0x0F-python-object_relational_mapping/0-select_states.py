@@ -2,8 +2,8 @@
 """
 Module to use the DB
 """
-import MySQLdb
 import sys
+import MySQLdb
 
 
 if __name__ == "__main__":
